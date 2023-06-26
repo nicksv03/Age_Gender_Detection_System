@@ -14,7 +14,7 @@ def main():
         image = image / 255.0
         image = tf.expand_dims(image, axis=0)
 
-        model = tf.keras.models.load_model('model_1.h5')
+        model = tf.keras.models.load_model('/Users/nikhil/Library/CloudStorage/GoogleDrive-dcbs17nikhilverma@gmail.com/My Drive/Github/Age_Gender_Detection_System/age_prediction/model_1.h5')
         age = model.predict(image)
         
         st.markdown('### I think you are {} years old'.format(int(age[0][0])))
