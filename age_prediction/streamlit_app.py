@@ -10,6 +10,7 @@ def main():
     if file is not None:
         image = Image.open(file)
         image = tf.image.resize(image, [224,224])
+        image = tf.image.convert_image_dtype(image, tf.float32)
         image = image.reshape((224, 224, 3))
         image = tf.expand_dims(image, axis=0)
         image = tf.keras.preprocessing.image.img_to_array(image)
