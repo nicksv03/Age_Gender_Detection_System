@@ -14,7 +14,7 @@ def main():
         image = image / 255.0
         image = tf.expand_dims(image, axis=0)
 
-        model = tf.keras.models.load_model('model1.h5')
+        model = tf.keras.models.load_model('model_1.h5')
         age = model.predict(image)
         
         st.markdown('### I think you are {} years old'.format(int(age[0][0])))
