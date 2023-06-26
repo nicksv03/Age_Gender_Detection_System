@@ -7,8 +7,8 @@ def main():
     st.write("Upload your photo and I will try to guess your age and gender.")
 
     # Load age and gender prediction models
-    age_model = tf.keras.models.load_model("age_prediction/model_1.h5")
-    gender_model = tf.keras.models.load_model("gender_prediction/model_1.h5")
+    age_model = tf.keras.models.load_model("model.h5")
+    gender_model = tf.keras.models.load_model("model.h5")
 
     file = st.file_uploader("Upload Your Photo")
 
