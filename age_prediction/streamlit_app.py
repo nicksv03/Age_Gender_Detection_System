@@ -10,9 +10,10 @@ def main():
     if file is not None:
         image = Image.open(file)
         image = tf.image.resize(image, [224,224])
+        image = tf.expand_dims(image, axis=0)
         image = tf.keras.preprocessing.image.img_to_array(image)
         image = image / 255.0
-        image = tf.expand_dims(image, axis=0)
+        image = tf.expand_dims(image, axis=3)
 
         model = tf.keras.models.load_model('age_prediction/model_1.h5')
         age = model.predict(image)
