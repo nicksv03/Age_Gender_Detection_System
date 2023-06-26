@@ -1,37 +1,11 @@
-# Predicting Age and Gender using CNN on UTKFace Dataset
+# Age Prediction with UTKFace Dataset
 
-This project focuses on predicting the age and gender of individuals based on their facial images using deep learning techniques. The UTKFace dataset is utilized, which contains a large number of facial images labeled with age and gender information.
+This repository contains a data science project that focuses on predicting the age of individuals based on the UTKFace Dataset. The project includes the following steps:
 
-The code is implemented using Python and several popular libraries such as OpenCV, TensorFlow, Keras, NumPy, and Matplotlib. It follows the following steps:
+1. Data Preparation: The dataset consists of approximately 24,000 images, making it quite large. To enhance the model's speed and efficiency, the data is saved and compressed in TFRecords files. TFRecords provide an optimal storage solution for large datasets and facilitate training of Keras models. You can find more information on how and why to use TFRecords in the guide titled "A hands-on guide to TFRecords."
 
-1. Data Preparation:
-   - Reads the images from the UTKFace dataset directory.
-   - Resizes the images to a uniform size of 64x64 pixels.
-   - Converts the images to grayscale.
+2. Image Processing and Model Prediction: The images are resized, and a pretrained model is utilized to predict the age of each person in the dataset. By leveraging the power of transfer learning, the model can make accurate age predictions based on facial features extracted from the images.
 
-2. Data Exploration:
-   - Displays sample images from the dataset.
-   - Shows a bar chart of age distribution.
+3. Streamlit App Development: To make it interactive and user-friendly, a Streamlit app has been built. You can upload your own photo and discover how old the model estimates you to be. For optimal results, it is recommended to upload a squared image containing only your face. Feel free to leave your feedback in the comments section regarding the accuracy of the predictions.
 
-3. Data Preprocessing:
-   - Splits the dataset into training and testing sets.
-   - Performs one-hot encoding of age groups and converts gender labels to binary.
-
-4. Model Architecture:
-   - Defines a convolutional neural network (CNN) model using Keras.
-   - Utilizes convolutional and pooling layers to extract image features.
-   - Applies dropout regularization to reduce overfitting.
-   - Constructs separate branches for age and gender prediction.
-
-5. Model Training and Evaluation:
-   - Compiles the model with appropriate loss functions and metrics.
-   - Trains the model on the training dataset.
-   - Evaluates the model on the testing dataset.
-   - Saves the trained model to a file.
-
-6. Model Usage:
-   - Provides helper functions to display and interpret results.
-   - Defines age grouping and prediction functions.
-   - Demonstrates the prediction on sample images.
-
-Feel free to explore the code and adapt it to your own projects.
+To get started, please refer to the notebook and code in this repository. Enjoy exploring the age prediction capabilities of the machine learning model!
