@@ -13,6 +13,7 @@ def main():
         image = image.resize((224, 224))  # Resize the image to match the model's input size
         image = tf.keras.preprocessing.image.img_to_array(image)
         image = image / 255.0
+        image = image[:, :, :3]  # Keep only the first three channels (RGB), discard the alpha channel if present
         image = tf.expand_dims(image, axis=0)
 
         try:
