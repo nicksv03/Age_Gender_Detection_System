@@ -10,7 +10,7 @@ def main():
     if file is not None:
         image = Image.open(file)
         image = tf.image.resize(image, [224,224])
-        image = tf.keras.preprocessing.image.image_to_array(image)
+        image = tf.keras.preprocessing.image.img_to_array(image)
         image = image / 255.0
         image = tf.expand_dims(image, axis=0)
 
